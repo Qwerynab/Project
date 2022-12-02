@@ -3,11 +3,11 @@ using UnityEngine;
 
 public class EndTrigger : MonoBehaviour
 {
-    public GameManager gameManager; 
+    public GameManager Gamemanager; 
 
     void OnTriggerEnter ()
     {
-        gameManager.CompleteLevel();
+        Gamemanager.EndGame();
 
     }
 }

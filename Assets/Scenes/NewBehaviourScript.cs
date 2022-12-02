@@ -8,9 +8,16 @@ public class NewBehaviourScript : MonoBehaviour
 
     public float ForwardForce = 50f;
     public float SidewaysForce = 25;
-    // Start is called before the first frame update
-    void Start()
+    public float JumpForce = 25;
+    public bool AllowJump;
+    public GameObject Camera;
+
+    private void Update()
     {
+        if (AllowJump && Input.GetKeyDown(KeyCode.Space) && transform.position.y < 1.1f)
+        {
+            rb.AddForce(Vector3.up * JumpForce, ForceMode.VelocityChange);
+        }
         
     }
 
